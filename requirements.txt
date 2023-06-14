@@ -1,2 +1,6 @@
 tensorflow
 numpy
+flask
+mlflow
+requests
+waitress
