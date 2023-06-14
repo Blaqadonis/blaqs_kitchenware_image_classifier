@@ -1,7 +1,7 @@
 import requests
 
 # URL of the Flask app
-url = 'http://localhost:9696/classifier_predict'
+url = 'http://localhost:9696/classifier_predict_mlflow'
 
 # image URL for prediction
 image_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LMmuWRP3JXQEHdfRkF0Gkaa4MofCs6MbXMcV__I&s'

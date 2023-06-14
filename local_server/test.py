@@ -1,26 +1,24 @@
 import requests
-import numpy as np
 
+# URL of the Flask app
+url = 'http://localhost:9696/classifier_predict'
+
+# image URL for prediction
+image_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LMmuWRP3JXQEHdfRkF0Gkaa4MofCs6MbXMcV__I&s'
+
+# Create a dictionary with the image URL
 data = {
-    "Density": 1.0736,
-    "Age": 70,
-    "Weight": 134.25,
-    "Height": 67.00,
-    "Neck": 34.9,
-    "Chest": 89.2,
-    "Abdomen": 83.6,
-    "Hip": 88.8,
-    "Thigh": 49.6,
-    "Knee": 34.8,
-    "Ankle": 21.5,
-    "Biceps": 25.6,
-    "Forearm": 25.7,
-    "Wrist": 18.5
+    'url': image_url
 }
 
-# Reshape the dictionary into a 2D array
-#data = np.array(list(data.values())).reshape(1, -1)
+# Send a POST request to the Flask app
+response = requests.post(url, data=data)
 
-url = 'http://localhost:9696/predict'
-response = requests.post(url, json=data)
-print(response.json())
+# Check the response status code
+if response.status_code == 200:
+    # Retrieve the prediction result
+    result = response.json()
+    #prediction = result['prediction']
+    print(result)
+else:
+    print('Error occurred during prediction.')
