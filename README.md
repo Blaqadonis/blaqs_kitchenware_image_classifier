@@ -6,7 +6,7 @@ DataTalks.Club organized an image classification competition for their 2022 Mach
 
 With more than 9000 photos of kitchen utensils, my model ```scurry-eye``` was able to attain an initial accuracy of 93% on the validation dataset. I actually ended up top 20 in the competition.
 
-Anyway, I retrained ```scurry-eye``` and added some augmentation here and there. Now its with 96% accuracy on validation set. I could not upload the new  training  script here - the tensorflow model is quite heavy!
+Anyway, I retrained ```scurry-eye``` and added some augmentation here and there. Now its with 96% accuracy on validation set. I could not upload the new  training  noebook here because of the weight of the tensorflow model!
 
 
 In this competition we were asked to classify images of different kitchenware items into 6 classes:
