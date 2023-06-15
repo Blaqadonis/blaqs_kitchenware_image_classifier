@@ -37,7 +37,7 @@ To create an environment with that version of python using Conda: ```conda creat
 
 Just replace ```<env-name>``` with any title you want. Next:
 
- conda activate ```<env-name>``` to activate the environment.
+ ```conda activate <env-name>``` to activate the environment.
 
 ## 1. Running the container (Dockerfile)
 First, you need to have docker installed on your system. I am using a windows machine, and I have docker desktop installed on my system. If you do not have that, then you should try doing that first. If you are all set and good, then proceed.
